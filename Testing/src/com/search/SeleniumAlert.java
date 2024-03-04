@@ -31,19 +31,19 @@ public class SeleniumAlert {
 		driver.findElement(By.xpath("//a[text()='Alert with Textbox ']")).click();//a[@href='#CancelTab']
 		driver.findElement(By.xpath("//button[text()='click the button to demonstrate the prompt box ']")).click();////button[text()='click the button to display a confirm box ']
 		
-		String alertMessage= driver.switchTo().alert().getText();
-		System.out.println(alertMessage);
+		//String alertMessage= driver.switchTo().alert().getText();
+	//	System.out.println(alertMessage);
 		
 		
 		Alert promptAlert = driver.switchTo().alert();
 
 		
-		String promptText = promptAlert.getText();
+	//	String promptText = promptAlert.getText();
 
 		
 		promptAlert.sendKeys("Selenium");
 
-		// Click the OK button to accept the prompt
+		
 		//promptAlert.accept();
 		  // promptAlert.sendKeys("Hi Buddy");
 		 //  promptAlert.accept();
