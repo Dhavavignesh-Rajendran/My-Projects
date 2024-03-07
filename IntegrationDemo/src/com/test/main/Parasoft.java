@@ -24,7 +24,7 @@ public class Parasoft extends ParaSoftProperties {
 
 	private static WebDriver OpenApplication() {
 		System.setProperty("WebDriver.chrome.driver",
-				"C:/Users/DHARAJEN/Downloads/chromedriver-win64 (2)/chromedriver-win64/chromedriver.exe");
+				"C:/Users/DHARAJEN/Downloads/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://parabank.parasoft.com/");
@@ -52,7 +52,7 @@ public class Parasoft extends ParaSoftProperties {
 	}
 
 	private static void ValidationOfError() {
-		Assert.assertEquals(ExpectedErrorMessae, util.GetText(ActualErrorMessage));
+		Assert.assertEquals(ExpectedErrorMessage, util.GetText(ActualErrorMessage));
 	}
 
 	private static void CloseApplication() {

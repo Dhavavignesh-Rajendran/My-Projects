@@ -18,5 +18,5 @@ public class ParaSoftProperties {
 	public static String SsnCode = "453267";
 	public static String FindLoginButtom = "//input[@value='Find My Login Info']";
 	public static String ActualErrorMessage = "//p[@class='error']";
-	public static String ExpectedErrorMessae = "The customer information provided could not be found.";
+	public static String ExpectedErrorMessage = "The customer information provided could not be found.";
 }

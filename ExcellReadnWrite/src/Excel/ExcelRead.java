@@ -23,19 +23,19 @@ public class ExcelRead {
 		int lastRowNum = sheet.getLastRowNum();
 		int RowNumWthHeader = sheet.getPhysicalNumberOfRows();
 		int lastCellNum = sheet.getRow(0).getLastCellNum();
-//		for (int i = 1; i <= lastRowNum; i++) {
-//
-//			XSSFRow row = sheet.getRow(i);
-//			for (int j = 0; j < lastCellNum; j++) {
-//				XSSFCell cell = row.getCell(j);
-//				DataFormatter dft = new DataFormatter();
-//				String value = dft.formatCellValue(cell);
-//				System.out.println(value);
-//
-//			}
-//			
-//		}
-//		System.out.println("-------------------------------------------------------------------------------");
+		for (int i = 1; i <= lastRowNum; i++) {
+
+			XSSFRow row = sheet.getRow(i);
+			for (int j = 0; j < lastCellNum; j++) {
+				XSSFCell cell = row.getCell(j);
+				DataFormatter dft = new DataFormatter();
+				String value = dft.formatCellValue(cell);
+				System.out.println(value);
+
+			}
+			
+		}
+		System.out.println("-------------------------------------------------------------------------------");
 	
 		Scanner getuservalue=new Scanner(System.in);
 		System.out.println("Enetr the value---->");
