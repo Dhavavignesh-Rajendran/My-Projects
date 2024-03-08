@@ -30,7 +30,7 @@ public class DriverUtils {
 	{
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 		By by=By.xpath(xpath);
-		//wait.until(ExpectedConditions.elementToBeSelected(by));
+	//	wait.until(ExpectedConditions.elementToBeSelected(by));
 		//driver.findElement(by).click();
 		new Select(driver.findElement(by)).selectByValue(option);;
 	}

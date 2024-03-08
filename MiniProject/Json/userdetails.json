@@ -1,0 +1,15 @@
+{
+	"skipsigninButton":"//button[@id='btn2']",
+	"firstnamexpath":"//input[@placeholder='First Name']",
+	"firstname":"dhava",
+	"genderxpath":"//input[@value='Male']",
+	"hobby1":"//input[@value='Cricket']",
+	"hobby2":"//input[@value='Movies']",
+	"yearxpath":"//select[@id='yearbox']",
+	"yearvalue":"1918",
+	"monthxpath":"//select[@placeholder='Month']",
+	"monthvalue":"September",
+	"dayxpath":"//select[@id='daybox']",
+	"dayvalue":"13",
+	"usersubmit":"//button[@id='submitbtn']"
+}

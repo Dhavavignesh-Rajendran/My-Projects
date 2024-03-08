@@ -1,0 +1,8 @@
+{
+	"searchfield":"//input[@class='desktop-searchBar']",
+	"Nike Shoes":"Nike Shoes",
+	"searchbutton":"//a[@class='desktop-submit']",
+	"menradiobutton":"(//label[@class='common-customRadio gender-label'])[1]",
+	"pricefilter":"//div[@class='sort-sortBy']",
+	"lowtohigh":"(//div[@class='sort-sortBy']//ul[@class='sort-list']//li//label[@class='sort-label '])[6]"
+}
