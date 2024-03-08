@@ -1,6 +1,7 @@
 {
 	"skipsigninButton":"//button[@id='btn2']",
 	"firstnamexpath":"//input[@placeholder='First Name']",
+	"lastnamexpath":"//input[@placeholder='Last Name']",
 	"firstname":"dhava",
 	"genderxpath":"//input[@value='Male']",
 	"hobby1":"//input[@value='Cricket']",

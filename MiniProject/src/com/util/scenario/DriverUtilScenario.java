@@ -44,5 +44,13 @@ public class DriverUtilScenario {
 		  js.executeScript(jscommand, arg);
 				
 	}
+	
+	public String GetText(String xpath)
+	{
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+		By by=By.xpath(xpath);
+		wait.until(ExpectedConditions.elementToBeClickable(by));
+		return driver.findElement(by).getText();
+	}
 
 }

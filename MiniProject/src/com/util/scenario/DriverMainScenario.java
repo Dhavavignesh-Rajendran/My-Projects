@@ -19,10 +19,8 @@ public class DriverMainScenario {
 	static WebDriver driver;
 
 	@Test
-	public static void TestStart ()throws IOException, ParseException {
-
+	public static void TestStart() throws IOException, ParseException {
 		JsonCredential();
-		
 	}
 
 	@BeforeTest
@@ -37,33 +35,27 @@ public class DriverMainScenario {
 	}
 
 	public static void JsonCredential() throws IOException, ParseException {
-
 		FileReader reader = new FileReader("./Json/userdetails.json");
-
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String, String> userData = mapper.readValue(reader, Map.class);
-
 		for (Map.Entry<String, String> a : userData.entrySet()) {
 			if (a.getValue() != null) {
 				System.out.println(a.getKey() + ":" + "all good to go");
-
 			} else {
 				System.out.println(a.getKey() + ":" + "data missing");
 			}
 		}
-		performClickOperations(userData);
-		PerformDateSelection(userData);
-		performSendKeysOperations(userData);
-
+		ClickSkipSignin(userData);
+		EnterUserDetails(userData);
+		ClickSubmitButton(userData);
 	}
 
-	public static void performClickOperations(Map<String, String> userData) {
+	public static void ClickSkipSignin(Map<String, String> userData) {
 		util.Click(userData.get("skipsigninButton"));
-
-
 	}
 
-	public static void PerformDateSelection(Map<String, String> userData) {
+	public static void EnterUserDetails(Map<String, String> userData) {
+		util.Sendkeys(userData.get("firstnamexpath"), userData.get("firstname"));
 		util.Click(userData.get("genderxpath"));
 		util.Click(userData.get("hobby1"));
 		util.Click(userData.get("hobby2"));
@@ -71,18 +63,15 @@ public class DriverMainScenario {
 		util.Select(userData.get("yearxpath"), userData.get("yearvalue"));
 		util.Select(userData.get("monthxpath"), userData.get("monthvalue"));
 		util.Select(userData.get("dayxpath"), userData.get("dayvalue"));
-
 	}
 
-	public static void performSendKeysOperations(Map<String, String> userData) {
-		util.Sendkeys(userData.get("firstnamexpath"), userData.get("firstname"));
+	public static void ClickSubmitButton(Map<String, String> userData) {
 		util.Click(userData.get("usersubmit"));
-
 	}
-	
-//	@AfterTest
-//	public static void CloseApplication() {
-//		driver.quit();
-//	}
+
+	@AfterTest
+	public static void CloseApplication() {
+		driver.quit();
+	}
 
 }
