@@ -2,19 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-08T18:36:52 IST" name="Default suite" finished-at="2024-03-08T18:37:01 IST" duration-ms="8235">
+  <suite started-at="2024-03-18T13:05:47 IST" name="Default suite" finished-at="2024-03-18T13:05:56 IST" duration-ms="8888">
     <groups>
     </groups>
-    <test started-at="2024-03-08T18:36:52 IST" name="Default test" finished-at="2024-03-08T18:37:01 IST" duration-ms="8235">
+    <test started-at="2024-03-18T13:05:47 IST" name="Default test" finished-at="2024-03-18T13:05:56 IST" duration-ms="8888">
       <class name="com.util.scenario.MyntraMain">
-        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:com.util.scenario.MyntraMain@202b0582]" started-at="2024-03-08T18:36:52 IST" name="OpenApplication" finished-at="2024-03-08T18:36:57 IST" duration-ms="4845" status="PASS">
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:com.util.scenario.MyntraMain@54422e18]" started-at="2024-03-18T13:05:47 IST" name="OpenApplication" finished-at="2024-03-18T13:05:52 IST" duration-ms="5291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method signature="Testing()[pri:0, instance:com.util.scenario.MyntraMain@202b0582]" started-at="2024-03-08T18:36:57 IST" name="Testing" finished-at="2024-03-08T18:37:01 IST" duration-ms="3284" status="PASS">
+        <test-method signature="Testing()[pri:0, instance:com.util.scenario.MyntraMain@54422e18]" started-at="2024-03-18T13:05:52 IST" name="Testing" finished-at="2024-03-18T13:05:55 IST" duration-ms="3065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Testing -->
+        <test-method is-config="true" signature="CloseApplication()[pri:0, instance:com.util.scenario.MyntraMain@54422e18]" started-at="2024-03-18T13:05:55 IST" name="CloseApplication" finished-at="2024-03-18T13:05:56 IST" duration-ms="484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApplication -->
       </class> <!-- com.util.scenario.MyntraMain -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

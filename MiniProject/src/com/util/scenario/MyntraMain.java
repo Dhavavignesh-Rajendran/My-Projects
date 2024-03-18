@@ -20,21 +20,16 @@ public class MyntraMain {
 	static DriverUtilScenario util;
 	static WebDriver driver;
 
+	@BeforeTest
+	private static void OpenApplication() {
+		util = new DriverUtilScenario(driver);	
+		util.credenTials("https://www.myntra.com/");
+	}
+
 	@Test
 	public static void Testing()throws IOException, ParseException {
 		
 		JsonCredential();		
-	}
-
-	@BeforeTest
-	private static WebDriver OpenApplication() {
-		System.setProperty("WebDriver.chrome.driver", "C:/Users/DHARAJEN/Downloads/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get("https://www.myntra.com/");
-		driver.manage().window().maximize();
-		util = new DriverUtilScenario(driver);
-		return driver;
 	}
 
 	public static void JsonCredential() throws IOException, ParseException {
@@ -46,19 +41,19 @@ public class MyntraMain {
 	}
 
 	public static void performSearchOperation(Map<String, String> userData) {	
-		util.Sendkeys(userData.get("searchfield"), userData.get("Nike Shoes"));
-		util.Click(userData.get("searchbutton"));
+		util.sendKeys(userData.get("searchfield"), userData.get("Nike Shoes"));
+		util.cLick(userData.get("searchbutton"));
 	}
 
 	public static void PerformFilterOptions(Map<String, String> userData) {
-		util.Click(userData.get("menradiobutton"));
-		util.Click(userData.get("pricefilter"));
-		util.Click(userData.get("lowtohigh"));
+		util.cLick(userData.get("menradiobutton"));
+		util.cLick(userData.get("pricefilter"));
+		util.cLick(userData.get("lowtohigh"));
 	}
 	
 	@AfterTest
 	public static void CloseApplication() {
-		driver.quit();
+		util.cLose();
 	}
 
 }

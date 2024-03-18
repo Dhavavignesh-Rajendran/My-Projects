@@ -5,8 +5,9 @@
     <classes>
       <class name="com.util.scenario.DriverMainScenario">
         <methods>
-          <include name="OpenApplication"/>
+          <include name="closeApplication"/>
           <include name="TestStart"/>
+          <include name="openApplication"/>
         </methods>
       </class> <!-- com.util.scenario.DriverMainScenario -->
     </classes>
